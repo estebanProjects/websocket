@@ -10,6 +10,7 @@ app.use(express.static(__dirname + '/public'))
 // Server 
 const http = require('http')
 const server = http.createServer(app)
+const port = process.env.PORT || 3003
 
 // Socket
 const { Server } = require('socket.io')
@@ -36,6 +37,6 @@ io.on("connection", (socket) => {
 app.use('/api', router)
 
 
-server.listen(3003, () => {
+server.listen(port, () => {
     console.log("Server running on port 3003")
 })
