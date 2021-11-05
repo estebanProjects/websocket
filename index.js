@@ -4,6 +4,7 @@ const router = require('./routes/index')
 
 let msn = []
 
+
 // Archivos estaticos
 app.use(express.static(__dirname + '/public'))
 
